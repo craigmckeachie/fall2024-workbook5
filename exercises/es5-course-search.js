@@ -38,7 +38,6 @@ let courses = [
   },
 ];
 
-
 //1. When does the PROG200 course start?
 for (const course of courses) {
   if (course.CourseId === "PROG200") {
@@ -46,18 +45,18 @@ for (const course of courses) {
   }
 }
 
-
 //1.1 using find
+//create a function that takes a single object as a parameter and returns true or false based on a comparison
 function isPROG200(course) {
-  return course.CourseId == "PROG200"
+  return course.CourseId == "PROG200";
 }
 
-//array methods
-let course = courses.find(isPROG200)
+//declar a variable to hold a single object that needs to be found in the array
+//assign (=) into that single object the return value of the find function
+//call the find function on the array and pass it the comparison function as the single parameter
+let course = courses.find(isPROG200);
+//after you get the object back, use dot notation to get to specific properties and print them out to the screen
 console.log(course.StartDate);
-
-
-
 
 // // What is the title of the PROJ500 course?
 // for (const course of courses) {
@@ -86,4 +85,3 @@ console.log(course.StartDate);
 // let filmName = "Bobbie Boots";
 // let result = filmName.indexOf("Bob");
 // console.log(result);
-

@@ -1,0 +1,7 @@
+- Weight of together vs. break out?
+- Breakout rooms to review the material before I cover it
+- Breakout rooms to work on first couple problems then demonstrate
+- Best of both worlds 
+  - Breakout room for those together with instructor (study group)
+  - Breakout rooms for peer tutoring
+- 

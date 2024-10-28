@@ -39,12 +39,22 @@ let courses = [
 ];
 
 
-// When does the PROG200 course start?
+//1. When does the PROG200 course start?
 for (const course of courses) {
   if (course.CourseId === "PROG200") {
     console.log(`The PROG200 course starts:  ${course.StartDate}`);
   }
 }
+
+
+//1.1 using find
+function isPROG200(course) {
+  return course.CourseId == "PROG200"
+}
+
+//array methods
+let course = courses.find(isPROG200)
+console.log(course.StartDate);
 
 
 

@@ -1,5 +1,12 @@
 "use strict";
 
+//Use this process:
+//1. delete function keyword, add arrow after the argument list
+//2. remove the name, make the function anonymous
+//3. if function is one line then curly braces ({}) are not needed and the return keyword is implicit (automatic/assumed)
+//to rewrite all examples below to use arrow functions
+// Note: on the 4th example you will need to write it from scratch
+
 let courses = [
   {
     CourseId: "PROG100",

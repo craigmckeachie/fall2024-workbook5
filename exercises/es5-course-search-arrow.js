@@ -58,7 +58,8 @@ function isPROG200(course) {
 //declare a variable to hold a single object that needs to be found in the array
 //assign (=) into that single object the return value of the find function
 //call the find function on the array and pass it the comparison function as the single parameter
-let prog200Course = courses.find(isPROG200);
+
+let prog200Course = courses.find((c) => c.CourseId == "PROG200");
 //after you get the object back, use dot notation to get to specific properties and print them out to the screen
 console.log(prog200Course.StartDate);
 
@@ -68,7 +69,7 @@ function isPROJ500(course) {
   return course.CourseId === "PROJ500";
 }
 
-let proj500Course = courses.find(isPROJ500);
+let proj500Course = courses.find((c) => c.CourseId == "PROJ500");
 console.log(proj500Course.Title);
 
 //------------------------------------------------------------------------
@@ -82,7 +83,7 @@ function isInexpensive(course) {
 //declare a variable to hold an array of objects that meet the comparison
 //assign (=) into that array the return value of the filter function
 //call the filter function on the array and pass it the comparison function as the single parameter
-let inexpensiveCourseTitles = courses.filter(isInexpensive);
+let inexpensiveCourseTitles = courses.filter((c) => Number(c.Fee) <= 50);
 console.log("Inexpensive course list: ", inexpensiveCourseTitles);
 
 //------------------------------------------------------------------------

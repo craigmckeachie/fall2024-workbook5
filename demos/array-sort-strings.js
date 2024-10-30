@@ -17,3 +17,9 @@ const spongebobCharacters = [
   "Flying Dutchman",
   "Bubble Buddy",
 ];
+
+
+spongebobCharacters.sort();
+
+console.log(spongebobCharacters);
+

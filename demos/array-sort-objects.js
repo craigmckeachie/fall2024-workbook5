@@ -90,3 +90,11 @@ const spongebobCharacters = [
     species: "Bubble",
   },
 ];
+
+spongebobCharacters.sort(function (characterA, characterB) {
+  if (characterA.name < characterB.name) return -1;
+  else if (characterA.name == characterB.name) return 0;
+  else return 1;
+});
+
+console.log(spongebobCharacters);

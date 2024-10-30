@@ -91,7 +91,16 @@ const spongebobCharacters = [
   },
 ];
 
+//using anonymous function
 spongebobCharacters.sort(function (characterA, characterB) {
+  if (characterA.name < characterB.name) return -1;
+  else if (characterA.name == characterB.name) return 0;
+  else return 1;
+});
+
+
+//using arrow function
+spongebobCharacters.sort((characterA, characterB) => {
   if (characterA.name < characterB.name) return -1;
   else if (characterA.name == characterB.name) return 0;
   else return 1;

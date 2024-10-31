@@ -108,6 +108,27 @@ const spongebobCharacters = [
   },
 ];
 
+const friendGroups = [
+  "Main Characters",
+  "Bikini Bottom Business Owners",
+  "Educators",
+  "Sports and Fitness Enthusiasts",
+  "Teenagers of Bikini Bottom",
+  "Superheroes",
+  "Otherworldly Characters",
+];
+
+//load friend group dropdown
+const friendGroupsDropdown = document.querySelector("#friendGroupsDropdown");
+
+for (const friendGroup of friendGroups) {
+  let option = document.createElement("option");
+  option.value = friendGroup;
+  option.innerText = friendGroup;
+  friendGroupsDropdown.appendChild(option);
+}
+
+//load the characters table
 // let charactersTBody = document.getElementById("charactersTBody");
 let charactersTBody = document.querySelector("#charactersTBody");
 console.log(charactersTBody);

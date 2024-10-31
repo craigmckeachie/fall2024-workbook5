@@ -84,7 +84,7 @@ function buildTableRowBothWays(shooter) {
   // let tr = document.createElement("tr");
   // playersTBody.appendChild(tr);
   //OR
-  let tr = playersTBody.insertRow(-1);
+  let tr = playersTBody.insertRow();
 
   // let td1 = document.createElement("td");
   // playersTBody.appendChild(td1);

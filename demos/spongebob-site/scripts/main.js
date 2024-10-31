@@ -158,5 +158,33 @@ for (const character of spongebobCharacters) {
 }
 
 function filterByFriendGroup() {
-  console.log(friendGroupsDropdown.value);
+  let selectedFriendGroup = friendGroupsDropdown.value;
+  let filteredCharacters = spongebobCharacters.filter((character)=> character.friendGroup = selectedFriendGroup)
+  charactersTBody.innerHTML = "";
+
+  for (const character of filteredCharacters) {
+    let tr = document.createElement("tr");
+    charactersTBody.appendChild(tr);
+  
+    let td1 = document.createElement("td");
+    td1.innerText = character.name;
+    tr.appendChild(td1);
+  
+    let td2 = document.createElement("td");
+    td2.innerText = character.species;
+    tr.appendChild(td2);
+  
+    let td3 = document.createElement("td");
+    td3.innerText = character.occupation;
+    tr.appendChild(td3);
+  
+    let td4 = document.createElement("td");
+    td4.innerText = character.favoriteActivity;
+    tr.appendChild(td4);
+  
+    let td5 = document.createElement("td");
+    td5.innerText = character.friendGroup;
+    tr.appendChild(td5);
+  }
+
 }

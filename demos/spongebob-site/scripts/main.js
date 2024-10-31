@@ -91,14 +91,34 @@ const spongebobCharacters = [
   },
 ];
 
+
+// let charactersTBody = document.getElementById("charactersTBody");
+let charactersTBody = document.querySelector("#charactersTBody");
+console.log(charactersTBody);
+
+
 for (const character of spongebobCharacters) {
-  buildTableRow(character);
+
+  let tr = document.createElement("tr");
+  charactersTBody.appendChild(tr)
+
+  let td1 = document.createElement("td");
+  td1.innerText = character.name;
+  tr.appendChild(td1);
+
+  let td2 = document.createElement("td");
+  td2.innerText = character.species;
+  tr.appendChild(td2);
+
+  let td3 = document.createElement("td");
+  td3.innerText = character.occupation;
+  tr.appendChild(td3);
+
+  let td4 = document.createElement("td");
+  td4.innerText = character.favoriteActivity;
+  tr.appendChild(td4);
+  
+ 
+
 }
 
-function buildTableRow(character) {
-  let tr = document.createElement("tr");
-  let td = document.createElement("td");
-  td.innerText = character.name;
-  tr.appendChild(td);
-  console.log(tr);
-}

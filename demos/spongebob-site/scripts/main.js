@@ -131,7 +131,6 @@ for (const friendGroup of friendGroups) {
 //load the characters table
 // let charactersTBody = document.getElementById("charactersTBody");
 let charactersTBody = document.querySelector("#charactersTBody");
-console.log(charactersTBody);
 
 for (const character of spongebobCharacters) {
   let tr = document.createElement("tr");
@@ -156,4 +155,8 @@ for (const character of spongebobCharacters) {
   let td5 = document.createElement("td");
   td5.innerText = character.friendGroup;
   tr.appendChild(td5);
+}
+
+function filterByFriendGroup() {
+  console.log(friendGroupsDropdown.value);
 }

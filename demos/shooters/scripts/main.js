@@ -64,27 +64,43 @@ let threePointShooters = [
 let playersTBody = document.querySelector("#playersTBody");
 console.log(playersTBody);
 
-threePointShooters.sort(function (playerA, playerB) {
-  return playerB.threePointPercentage - playerA.threePointPercentage;
-});
+function buildTableRow(shooter) {
+  // let tr = document.createElement("tr");
+  // playersTBody.appendChild(tr);
+  //OR
+  let tr = playersTBody.insertRow(-1)
 
-for (const shooter of threePointShooters) {
-  let tr = document.createElement("tr");
-  playersTBody.appendChild(tr);
-
-  let td1 = document.createElement("td");
+  // let td1 = document.createElement("td");
+  // playersTBody.appendChild(td1);
+  //OR
+  let td1 = tr.insertCell();
   td1.innerText = shooter.name;
-  playersTBody.appendChild(td1);
 
-  let td2 = document.createElement("td");
+
+  // let td2 = document.createElement("td");
+  // tr.appendChild(td2);
+  let td2 = tr.insertCell();
   td2.innerText = shooter.team;
-  playersTBody.appendChild(td2);
 
-  let td3 = document.createElement("td");
+  // let td3 = document.createElement("td");
+  // tr.appendChild(td3);
+  let td3 = tr.insertCell();
   td3.innerText = shooter.position;
-  playersTBody.appendChild(td3);
 
-  let td4 = document.createElement("td");
+  // let td4 = document.createElement("td");
+  // tr.appendChild(td4);
+  let td4 = tr.insertCell();
   td4.innerText = shooter.threePointPercentage;
-  playersTBody.appendChild(td4);
 }
+
+function loadShootersTable() {
+  threePointShooters.sort(function (playerA, playerB) {
+    return playerB.threePointPercentage - playerA.threePointPercentage;
+  });
+
+  for (const shooter of threePointShooters) {
+    buildTableRow(shooter);
+  }
+}
+
+loadShootersTable();

@@ -65,17 +65,32 @@ let playersTBody = document.querySelector("#playersTBody");
 console.log(playersTBody);
 
 function buildTableRow(shooter) {
+  let tr = playersTBody.insertRow();
+
+  let td1 = tr.insertCell();
+  td1.innerText = shooter.name;
+
+  let td2 = tr.insertCell();
+  td2.innerText = shooter.team;
+
+  let td3 = tr.insertCell();
+  td3.innerText = shooter.position;
+
+  let td4 = tr.insertCell();
+  td4.innerText = shooter.threePointPercentage;
+}
+
+function buildTableRowBothWays(shooter) {
   // let tr = document.createElement("tr");
   // playersTBody.appendChild(tr);
   //OR
-  let tr = playersTBody.insertRow(-1)
+  let tr = playersTBody.insertRow(-1);
 
   // let td1 = document.createElement("td");
   // playersTBody.appendChild(td1);
   //OR
   let td1 = tr.insertCell();
   td1.innerText = shooter.name;
-
 
   // let td2 = document.createElement("td");
   // tr.appendChild(td2);

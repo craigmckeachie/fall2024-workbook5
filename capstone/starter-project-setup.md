@@ -1,4 +1,4 @@
-## Start with the starter project
+## Starter Project Setup
 
 1. Open a terminal on Mac or Gitbash on Windows
 2. Make sure you are in your `LearnToCode` directory

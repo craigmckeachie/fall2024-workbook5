@@ -33,7 +33,7 @@ If you haven't already, use these [directions to setup the starter project](./st
 ## Mountains Page
 
 1. Complete the mountains page.
-   ![Alt text](image-2.png)
+  ![Alt text](image-2.png)
 
 - Use [Football Teams Dropdown/Detail as an example](https://github.com/craigmckeachie/fall2024-workbook4/blob/main/exercises/football/index.html)
 

@@ -2,7 +2,7 @@
 
 ## Video Walkthrough
 
-- [Capstone 2: Enjoy the Outdoors Video Walkthrough](https://youtu.be/g7GforwZfKU)
+<a href="https://youtu.be/g7GforwZfKU" target="_blank">Capstone 2: Enjoy the Outdoors Video Walkthrough</a>
 
 ## Starter Project
 

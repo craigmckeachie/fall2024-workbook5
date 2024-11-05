@@ -12,15 +12,23 @@
         <form style="width: 20rem">
           <div class="mb-3">
             <label class="form-label" for="teamsDropdown">Team</label>
-            <select class="form-select" id="teamsDropdown">
+            <select class="form-select" id="teamsDropdown" onchange="showTeamDetails()">
               <option value="">Select...</option>
             </select>
           </div>
-          <button class="btn btn-primary" type="button" id="detailsButton" onclick="showTeamDetails()">
-            Show Details
-          </button>
+         
         </form>
-        <p id="teamDetailsParagraph"></p>
+        <div class="card" style="width: 18rem;">
+          <img src="images/dal.png" class="card-img-top" alt="Dallas Cowboys Logo">
+          <div class="card-body">
+            <h5 class="card-title">Dallas Cowboys</h5>
+            <div class="card-text">
+              <p>(DAL)</p> 
+              <p>Arlingon, TX</p>
+            </div>
+            
+          </div>
+        </div>
      
     </main>
     <script>

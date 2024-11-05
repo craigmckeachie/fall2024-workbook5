@@ -8,44 +8,43 @@
   </head>
   <body>
     <main class="container mt-4">
-     
-        <form style="width: 20rem">
-          <div class="mb-3">
-            <label class="form-label" for="teamsDropdown">Team</label>
-            <select class="form-select" id="teamsDropdown" onchange="showTeamDetails()">
-              <option value="">Select...</option>
-            </select>
-          </div>
-         
-        </form>
-        <div class="card" style="width: 18rem;">
-          <img src="images/dal.png" class="card-img-top" alt="Dallas Cowboys Logo">
-          <div class="card-body">
-            <h5 class="card-title">Dallas Cowboys</h5>
-            <div class="card-text">
-              <p>(DAL)</p> 
-              <p>Arlingon, TX</p>
-            </div>
-            
+      <form style="width: 20rem">
+        <div class="mb-3">
+          <label class="form-label" for="teamsDropdown">Team</label>
+          <select class="form-select" id="teamsDropdown" onchange="showTeamDetails()">
+            <option value="">Select...</option>
+          </select>
+        </div>
+      </form>
+      <div class="card" style="width: 18rem">
+        <img id="logoImage" src="images/default.png" class="card-img-top" alt="logo" />
+        <div class="card-body">
+          <h5 id="cardTitleHeading" class="card-title"></h5>
+          <div class="card-text">
+            <p id="abbreviationParagraph"></p>
+            <p id="cityParagraph"></p>
           </div>
         </div>
-     
+      </div>
     </main>
     <script>
       "use strict";
 
       let teams = [
-        { code: "PITT", name: "Pittsburgh Steelers", plays: "Pittsburgh, PA" },
-        { code: "DAL", name: "Dallas Cowboys", plays: "Arlington, TX" },
-        { code: "DEN", name: "Denver Broncos", plays: "Denver, CO" },
-        { code: "HOU", name: "Houston Texans", plays: "Houston, TX" },
-        { code: "KAN", name: "Kansas City Chiefs", plays: "Kansas City, MO" },
+        { code: "PITT", name: "Pittsburgh Steelers", plays: "Pittsburgh, PA", image: "pitt.png" },
+        { code: "DAL", name: "Dallas Cowboys", plays: "Arlington, TX", image: "dal.png" },
+        { code: "DEN", name: "Denver Broncos", plays: "Denver, CO", image: "den.jpeg" },
+        { code: "HOU", name: "Houston Texans", plays: "Houston, TX", image: "hou.jpeg" },
+        { code: "KAN", name: "Kansas City Chiefs", plays: "Kansas City, MO", image: "kan.png" },
       ];
 
       //get html elements into variables
       const teamsDropdown = document.getElementById("teamsDropdown");
       const teamDetailsParagraph = document.getElementById("teamDetailsParagraph");
-      const detailsButton = document.getElementById("detailsButton");
+      const logoImage = document.getElementById("logoImage");
+      const cardTitleHeading = document.getElementById("cardTitleHeading");
+      const abbreviationParagraph = document.getElementById("abbreviationParagraph");
+      const cityParagraph = document.getElementById("cityParagraph");
 
       //create functions to handle user events
       function loadTeams() {
@@ -61,8 +60,10 @@
         const teamCode = teamsDropdown.value;
         for (const team of teams) {
           if (team.code == teamCode) {
-            const details = `You selected the ${team.name} (${team.code}) who play in ${team.plays}`;
-            teamDetailsParagraph.innerText = details;
+            logoImage.src = `./images/${team.image}`;
+            cardTitleHeading.innerText = team.name;
+            abbreviationParagraph.innerText = team.code;
+            cityParagraph.innerText = team.plays;
           }
         }
       }

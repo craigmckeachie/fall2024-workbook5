@@ -16,7 +16,7 @@
           </select>
         </div>
       </form>
-      <div class="card" style="width: 18rem">
+      <div id="teamDetailsDiv" class="card" style="width: 18rem; display: none">
         <img id="logoImage" src="images/default.png" class="card-img-top" alt="logo" />
         <div class="card-body">
           <h5 id="cardTitleHeading" class="card-title"></h5>
@@ -40,7 +40,7 @@
 
       //get html elements into variables
       const teamsDropdown = document.getElementById("teamsDropdown");
-      const teamDetailsParagraph = document.getElementById("teamDetailsParagraph");
+      const teamDetailsDiv = document.getElementById("teamDetailsDiv");
       const logoImage = document.getElementById("logoImage");
       const cardTitleHeading = document.getElementById("cardTitleHeading");
       const abbreviationParagraph = document.getElementById("abbreviationParagraph");
@@ -58,6 +58,12 @@
 
       function showTeamDetails() {
         const teamCode = teamsDropdown.value;
+        if (teamCode) {
+          teamDetailsDiv.style.display = "block";
+        } else {
+          teamDetailsDiv.style.display = "none";
+        }
+
         for (const team of teams) {
           if (team.code == teamCode) {
             logoImage.src = `./images/${team.image}`;
